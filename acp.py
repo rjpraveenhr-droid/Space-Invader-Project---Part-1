@@ -110,11 +110,9 @@ def show_lives():
 
     for i in range(lives):
         screen.blit(small_rocket, (10 + i * 35, 55))
-
-
-def level_up_message():
     global level_up_time
-
+    
+def level_up_message():
     if pygame.time.get_ticks() - level_up_time < 1500:
         message = level_font.render(
             "LEVEL UP! LEVEL " + str(level),
